@@ -1,4 +1,4 @@
-﻿customer_id ,name ,email ,tel ,created_at ,updated_at
+﻿customer_id,name,email,tel,created_at,updated_at
 1,Irfan Bakti ,irfan88@example.com ,60123456789,8/7/2019 8:13,8/7/2019 8:13
 2,Jack Smmith ,jack.smmith@acme.io ,60132456781,8/7/2019 8:13,8/7/2019 8:13
 3,Nazir ,,6.01E+11,8/7/2019 8:13,8/7/2019 8:13

@@ -1,0 +1,34 @@
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    tel VARCHAR(15),
+    created_at TIMESTAMP,
+    updated_at TIMESTAMP
+);
+
+CREATE TABLE invoice (
+    invoice_id INT PRIMARY KEY,
+    number VARCHAR(20),
+    sub_total DECIMAL(10, 2),
+    tax_total DECIMAL(10, 2),
+    total DECIMAL(10, 2),
+    customer_id INT,
+    created_at TIMESTAMP,
+    updated_at TIMESTAMP,
+    FOREIGN KEY (customer_id) REFERENCES customers (customer_id)
+);
+
+CREATE TABLE invoice_lines (
+    invoice_line_id INT PRIMARY KEY,
+    description VARCHAR(255),
+    unit_price DECIMAL(10, 2),
+    quantity INT,
+    sub_total DECIMAL(10, 2),
+    tax_total DECIMAL(10, 2),
+    total DECIMAL(10, 2),
+    tax_id INT,
+    sku_id INT,
+    invoice_id INT,
+    FOREIGN KEY (invoice_id) REFERENCES invoice (invoice_id)
+);
